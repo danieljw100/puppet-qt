@@ -1,20 +1,22 @@
-node 'master' {
-  include users
-  include nginx
+node 'nyqctlr02' {
+  #include users
+  #include nginx
   #include sudoers
-  include docker
+  #include docker
 }
 
-node 'node01' {
+node 'nyqnode01' {
   include users
-  include nginx
-  #include sudoers
-  include docker
 }
 
-node 'node02' {
+node 'nyqnode02' {
   include users
-  include nginx
-  #include sudoers
-  include docker
+}
+
+node 'nyqnode03' {
+  include users
+}
+
+node 'nyqnode04' {
+  include users
 }

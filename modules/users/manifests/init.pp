@@ -2,27 +2,27 @@
 
 class users {
 
-  user { 'danw':
+  user { 'quantile':
     ensure => present,
-    groups => ['vagrant'],
-    comment => 'Daniel Wilkie',
-    home => '/home/danw',
+    groups => ['quantile'],
+    comment => 'quantile system',
+    home => '/home/quantile',
     managehome => true,
   }
 
-  ssh_authorized_key { 'danw_ssh':
-    user => 'danw',
+  ssh_authorized_key { 'quantile@nyqctlr02':
+    user => 'quantile',
     type => 'rsa',
     key => '123456789123456789',
   }
 
-#  package { '<package-name>':
-#    ensure => installed,
-#  }
+  #  package { '<package-name>':
+  #    ensure => installed,
+  #  }
 
-#  service { '<service-name>':
-#    ensure => running,
-#    require => Package['<package-name>'],
-#  } 
+  #  service { '<service-name>':
+  #    ensure => running,
+  #    require => Package['<package-name>'],
+  #  } 
 
 }
