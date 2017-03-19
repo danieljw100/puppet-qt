@@ -4,7 +4,7 @@ class users {
 
   user { 'quantile':
     ensure => present,
-    groups => ['quantile'],
+    # groups => ['quantile'],
     comment => 'quantile system',
     home => '/home/quantile',
     managehome => true,
